@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tuesdayApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Tuesday</title>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/assets/scripts/app.min.js"></script>
+</head>
+<body>
+
+    <h1>Angular All The Things!</h1>
+
+    <div ng-controller="MainController">
+        {{greeting}}
+    </div>
+
+    <div ng-controller="DoubleController">
+        Two times <input type="number" ng-model="pretzel"> equals {{double(pretzel)}}
+    </div>
+
+    <div ng-controller="SpicyController">
+
+        <input type="text" ng-model="customSpice">
+
+        <button ng-click="changeSpice('mildly')">Chili</button>
+        <button ng-click="changeSpice('very')">Jalapeno</button>
+        <button ng-click="changeEmptySpice()">Custom</button>
+
+        <p>The food is {{spice}} spicy!</p>
+
+    </div>
+
+    <!--<div>-->
+        <!--<div ng-controller="OneController">-->
+                <!--Good {{timeOfDay}} {{person}}!-->
+            <!--<div ng-controller="TwoController">-->
+                    <!--Good {{timeOfDay}} {{person}}!-->
+                <!--<div ng-controller="ThreeController">-->
+                     <!--Good {{timeOfDay}} {{person}}!-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+
+
+
+
+
+</body>
+</html>
